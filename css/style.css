@@ -1,10 +1,10 @@
 .logo {
-    display: none;
-    background: linear-gradient(to bottom right,#c09,#f42 85%);
+    float: left;
     width: 66px;
     height: 16px;
     padding: 16px 20px;
-    float: left;
+    background: linear-gradient(to bottom right,#c09,#f42 85%);
+    display: none;
 }
 
 .top-nav {
@@ -13,17 +13,11 @@
 }
 
 .top-nav ul li {
-    background: #131313;
     float: left;
     padding: 0 8px;
-    color: white;
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
     line-height: 32px;
-    max-height: 32px;
-    position: relative;
-    z-index: 2;
+    font-size: 13px;
+    color: white;
 }
 
 .main-nav {
@@ -40,16 +34,16 @@
 
 .main-nav a {
     text-decoration: none;
-    color: #555;
-    line-height: 48px;
-    margin: 10px;
     text-transform: uppercase;
-    font-size: 13px;
     letter-spacing: 0;
+    line-height: 48px;
+    font-size: 13px;
+    color: #555;
+    margin: 6px;
 }
 
 .main-nav span, .main-nav i {
-    color: red;
+    color: #f42;
     float: right;
     line-height: 48px;
     margin-right: 10px;
@@ -67,50 +61,54 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 8px;
-    position: relative;
     margin: 2px 10px;
     box-sizing: border-box;
-    color: white;
     text-shadow: 0 0 3px #333;
+    color: white;
+}
+
+.cover article {
+    position: relative;
 }
 
 .large {
+    grid-row: span 2;
     grid-column: span 2;
     background: url("https://img-cdn.tnwcdn.com/image?fit=1280%2C720&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2019%2F03%2FUntitled-design119.png&signature=711e75b4cdc6f8108b7232d35ce778bf") no-repeat;
     background-size: 100% 100%;
-    grid-row: span 2;
-    height: 500px;
-}
-
-.story {
-    text-align: left;
-}
-
-.story p {
-    position: relative;
-    left: 10px;
-    top: 74%;
-}
-
-.story h2 {
-    position: relative;
-    left: 10px;
-    top: 76%;
-    font-size: 30px;
+    height: 75vh;
 }
 
 .large p {
-    position: relative;
-    left: 10px;
-    top: 80%;
+    position: absolute;
+    left: 15px;
+    top: 70%;
+    font-size: 24px;
 }
 
 .large h2 {
-    position: relative;
-    left: 10px;
-    top: 82%;
+    position: absolute;
+    left: 15px;
+    top: 78%;
     font-size: 40px;
 }
+
+.story h2 {
+    position: absolute;
+    left: 15px;
+    top: 75%;
+    font-size: 24px;
+}
+
+.story p {
+    position: absolute;
+    left: 15px;
+    top: 62%;
+    font-size: 20px;
+}
+
+
+
 
 /******* background image for articles *******/
 
@@ -136,6 +134,44 @@
     margin-bottom: 15px;
 }
 
+/******** Latest Stories*******/
+
+.latest {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    line-height: 1.2em;
+}
+
+.latest img {
+    width: 100%;
+}
+
+.latest p {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/******** Footer *******/
+
+footer {
+    background: #000000;
+    text-align: center;
+    padding: 30px 0;
+    color: #ffffff;
+}
+
+.copy {
+    margin: 20px 0;
+}
+
+footer nav a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/******** Media Queries *******/
 @media only screen and (max-width: 1000px) {
 
     .logo {
@@ -149,6 +185,10 @@
 
     .main-nav .hide {
         display: none;
+    }
+
+    .latest {
+        grid-template-columns: auto auto auto;
     }
 }
 
@@ -166,6 +206,42 @@
     .main-nav ul {
         display: none;
     }
+
+    .cover {
+        grid-template-columns: auto;
+    }
+
+    .large, .story {
+        height: 200px;
+    }
+
+    .large p {
+        top: 62%;
+    }
+
+    .large p, .story p {
+        font-size: 18px;
+    }
+
+    .large h2, .story h2 {
+        font-size: 24px;
+    }
+
+    .large {
+        grid-row: unset;
+        grid-column: unset;
+    }
+
+    .latest {
+        grid-template-columns: auto;
+    }
+
+    .latest img {
+        width: 25%;
+        float: left;
+        margin-right: 10px;
+    }
+
 }
 
 
