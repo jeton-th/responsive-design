@@ -6,5 +6,58 @@ body {
 }
 
 .logo {
+    display: none;
     background: linear-gradient(to bottom right,#c09,#f42 85%);
+    width: 66px;
+    height: 16px;
+    padding: 16px 20px;
+    float: left;
 }
+
+.top-nav {
+    overflow: hidden;
+    background: #131313;
+}
+
+.top-nav ul li {
+    background: #131313;
+    float: left;
+    padding: 0 8px;
+    color: white;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 32px;
+    max-height: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .logo {
+        display: block;
+        padding: 33px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .logo {
+        display: block;
+        padding: 16px 20px;
+    }
+
+    .top-nav {
+        display: none;
+    }
+
+    .main-nav {
+        
+    }
+}
+
+
+
