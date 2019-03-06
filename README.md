@@ -6,4 +6,4 @@ In this project, we built a responsive website. We cloned The Next Web (https://
 1. HTML
 2. CSS
 
-Live version available at (coming soon).
+Live version https://jeton-th.github.io/responsive-design/
